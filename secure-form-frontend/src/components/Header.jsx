@@ -8,13 +8,15 @@ export default function Header() {
       <div className="flex items-center justify-between mx-auto w-5/6">
         {/* Logo */}
         <div>
-          <img src={Logo} alt="Minals Logo" style={{ width: "80px" }} />
+          <Link to="/">
+            <img src={Logo} alt="Minals Logo" style={{ width: "80px" }} />
+          </Link>
         </div>
 
         {/* Menu */}
         <ul className="flex justify-between gap-16 text-sm text-white">
           <li>
-            <Link to="/">Log In</Link>
+            <Link to="/login">Log In</Link>
           </li>
           <li>
             <Link to="/">Create Account</Link>

@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header.jsx";
-import Form from "./components/Form.jsx";
+import CreateAcc from "./pages/createAcc.jsx";
+import LogIn from "./pages/logIn.jsx";
 import Footer from "./components/Footer.jsx";
 
 function App() {
@@ -9,8 +10,8 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route index element={<Form />}></Route> {/*Makes Home the default page*/}
-          {/* <Route path="/login" element={<Login />}></Route> */}
+          <Route index element={<CreateAcc />}></Route> {/*Makes Create Account the default page*/}
+          <Route path="/login" element={<LogIn />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>
