@@ -33,7 +33,6 @@ export default function CreateAccountPage() {
                     <div className="mt-4 text-center">
                         Already have an account? <Link to="/login" className="text-blue-500">Log in</Link>
                     </div>
-
             {/* <Footer will be here/> */}
         </div>
     );
