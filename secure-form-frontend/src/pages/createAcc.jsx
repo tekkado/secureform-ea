@@ -1,5 +1,6 @@
 import React from "react";
 import Form from "../components/Form.jsx";
+import { Link } from "react-router-dom";
 
 const createAccountFields = [
     { name: "firstName", label: "First Name", type: "text", required: true },
@@ -23,18 +24,15 @@ export default function CreateAccountPage() {
         <div className="bg-gray-100 h-screen">
             {/* <Navbar will be here /> */}
 
-            <div className="container mx-auto">
-                <div className="flex">
                     {/* Create Account Form Section */}
-                    <section className="mb-8 flex-1">
-                            <Form
-                                fields={createAccountFields}
-                                submitLabel="Create Account"
-                                onSubmit={handleCreateAccountSubmit}
-                            />
-                    </section>
-                </div>
-            </div>
+                    <Form
+                        fields={createAccountFields}
+                        submitLabel="Create Account"
+                        onSubmit={handleCreateAccountSubmit}
+                    />
+                    <div className="mt-4 text-center">
+                        Already have an account? <Link to="/login" className="text-blue-500">Log in</Link>
+                    </div>
 
             {/* <Footer will be here/> */}
         </div>
